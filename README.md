@@ -14,3 +14,5 @@ Steps to run:
 
 Once containers are up, import the dumps file from the location "/clearglass-api/clearglass/src/dumps", to the database using TablePlus (or any other supported database GUI), using the File->Import feature.  
 
+The postman collection is available at "clearglass/src/tests"
+
