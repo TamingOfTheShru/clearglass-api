@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "aba437de-76f0-4de7-a6a3-2abf37d8992a",
+		"name": "Clearglass",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all cost ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/explorer",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"explorer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all cost by client_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/explorer?client_id=[eq, 2]",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"explorer"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "[eq, 2]"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all cost by project_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/explorer?project_id=[eq, 4]",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"explorer"
+					],
+					"query": [
+						{
+							"key": "project_id",
+							"value": "[eq, 4]"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cost by cost_type_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/explorer?cost_type_id=[eq,2]",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"explorer"
+					],
+					"query": [
+						{
+							"key": "cost_type_id",
+							"value": "[eq,2]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema",
+    "$id": "./schema/Cost.json",
+    "title": "Cost",
+    "description": "Describes a Cost",
+    "type": "object",
+    "filters": {},
+    "ignore": false,
+    "properties": {
+        "id": {
+            "type": "number",
+            "description": "describes the id of a customer"
+        },
+        "name": {
+            "type": "string",
+            "description": "describes the mobile number of a customer"
+        },
+        "amount": {
+            "type": "string",
+            "description": "describes the name of the customer"
+        },
+        "type": {
+            "type": "string",
+            "description": "describes the name of the customer"
+        },
+        "children": {
+            "type": "string",
+            "description": "describes the delivery address flat number of the customer"
+        }
+    },
+    "additionalProperties": true,
+    "links": [{
+        "href": "/api/explorer",
+        "description": "Gets cost data of all the clients and their projects",
+        "method": "GET",
+        "rel": "getAll",
+        "controller": "CostController",
+        "operation": "getCostData",
+        "filter": {
+            "type": "custom",
+            "parameters": [{
+                "name": "client_id",
+                "propertyDateType": "string",
+                "description": "like search query"
+            }, {
+                "name": "cost_type_id",
+                "propertyDateType": "string",
+                "description": "like search query"
+            }, {
+                "name": "project_id",
+                "propertyDateType": "string",
+                "description": "like search query"
+            }]
+        }
+    }]
+}

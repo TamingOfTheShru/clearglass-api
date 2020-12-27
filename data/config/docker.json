@@ -1,0 +1,39 @@
+{
+	"env": "docker",
+	"postgres": {
+		"username": "postgres",
+		"password": "123456",
+		"database": "postgres",
+		"host": "dockerhost",
+		"port": 5432,
+		"dialect": "postgres",
+		"dumpPath": "../dumps/postgres-dump.sql",
+		"modelPath": "../models",  
+		"define": {
+			"freezeTableName": true,
+			"underscored": true,
+			"createdAt": "created_at",
+			"updatedAt": "updated_at"
+		}
+	},
+	"clearglass": {
+		"type": "api",
+		"hostname": "clearglass",
+		"port": 5000,
+		"log": {
+			"path": ".",
+			"level": 30,
+			"stdout": true
+		},
+		"apiRegister": {
+			"apiSchemaPath": "./src/schema",
+			"prefixProfileKey": "clearglass",
+			"prefixSchemaKey": "api",
+			"controllerPath": "../../src/controller",
+			"serverConfig": {
+				"name": "clearglass",
+				"port": 8080
+			}
+		}
+	}
+}

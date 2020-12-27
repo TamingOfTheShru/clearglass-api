@@ -1,0 +1,33 @@
+{
+  "name": "clearglass",
+  "version": "1.0.0",
+  "description": "Clearglass Micro service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "debug": "nodemon index.js"
+  },
+  "author": "skyl.ai",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^5.5.2",
+    "async": "1.5",
+    "bluebird": "^3.5.1",
+    "bunyan": "^1.8.12",
+    "bunyan-format": "^0.2.1",
+    "debug": "^3.1.0",
+    "ejs": "^2.6.1",
+    "error-factory": "^0.1.6",
+    "httpsnippet": "^1.19.1",
+    "lodash": "^4.17.10",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "require-dir": "^1.0.0",
+    "restify": "^7.2.1",
+    "traverse": "^0.6.6",
+    "sequelize": "^5.21.7",
+    "pg": "^8.0.3"
+  },
+  "devDependencies": {}
+}

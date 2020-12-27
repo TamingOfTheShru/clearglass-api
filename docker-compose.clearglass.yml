@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  clearglass:
+    container_name: "clearglass"
+    build: 
+      context: ./clearglass
+      dockerfile: Dockerfile
+    environment:
+      NODE_CONFIG_DIR: "/opt/app/config"
+      NODE_ENV: docker
+    ports:
+      - "5000:8080"
+    depends_on:
+      - dockerhost
+    volumes: 
+      - ./clearglass/src:/opt/app/src
+      - ./data/config:/opt/app/config
+    command: >
+      /bin/bash -c "
+        while ! nc -z dockerhost 5432;
+        do
+          echo sleeping;
+          sleep 10;
+        done;
+        echo Postgres Connected!;
+        npm run debug;
+      "
+      
